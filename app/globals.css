@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #313131;
+  --foreground: #b3b3b3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +14,16 @@
   }
 }
 
+@font-face {
+  font-family: 'Concert';
+  src: url('/ConcertOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  }
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Concert';
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
