@@ -4,13 +4,6 @@ import { useState } from "react";
 import { textToImage } from "@/utils/textToImage";
 import {saveAs} from "file-saver"
 
-const LoadingIndicator = () => (
-    <div className="flex justify-center animate-spin mt-24">
-        <img src="/Engranaje.png" width={200} height={200} alt="Engranaje" />
-
-    </div>
-);
-
 export default function Home() {
     const [animal, setAnimal] = useState('')
     const [text, setText] = useState('')
@@ -68,10 +61,3 @@ export default function Home() {
     )
 
 }
-/*{loading && (
-    change ? (
-        <img src="/giphy.webp" width={200} height={200} className="mx-auto animate-pulse mt-24" alt="Engranaje"/>
-    ) : (
-        <img src={imageURL} width={512} height={512} className="mx-auto mt-4 rounded-xl" alt={change} />
-    )
-)}*/
