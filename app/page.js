@@ -20,7 +20,7 @@ export default function Home() {
         setChange(true)
         const imgURL = await textToImage(animal, text)
         console.log('IMAGEN URL', imgURL)
-        if (imgURL === undefined) setImageURLmageURL('/Error504.jpg')
+        if (imgURL === undefined) setImageURL('/Error504.jpg')
         else { setImageURL(imgURL) }
         setLoading(true)
         setChange(false)
@@ -28,9 +28,9 @@ export default function Home() {
 
     return (
         <div className="w-9/12 flex flex-col justify-center mt-4 mx-auto">
-            <p className="text-6xl text-center p-8 mt-8">Creador de tarjetas con IA</p>
+            <p className="text-6xl text-center mb-4">Creador de tarjetas con IA</p>
             <form className="w-4/5 flex flex-col gap-4 mx-auto items-center" onSubmit={aiBlob}>
-                <input className="p-4 text-xl rounded-lg w-full" type="text"
+                <input className="p-4 text-xl rounded-lg w-4/5" type="text"
                     value={animal}
                     onChange={(e) => setAnimal(e.target.value)}
                     placeholder="Ingrese un animalito"
@@ -40,7 +40,7 @@ export default function Home() {
                     onChange={(e) => setText(e.target.value)}
                     placeholder="Ingrese un titulo"
                 />
-                <button className="w-3/5 bg-green-600 text-slate-950 text-xl p-4 rounded-xl border-solid border-4 border-green-900 hover:bg-green-400"
+                <button className="w-1/4 bg-green-600 text-slate-950 text-xl p-4 rounded-2xl shadow-lg shadow-green-800/50 hover:bg-green-400"
                     type="submit">
                     Generar Imagen
                 </button>
@@ -52,7 +52,7 @@ export default function Home() {
                 <img src={imageURL} width={512} height={512} className="mx-auto mt-4 rounded-xl" alt={imageURL} />
             )}
             {loading && (
-                <button className="w-52 bg-green-600 text-slate-950 text-xl p-4 rounded-xl border-solid border-4 border-green-900 hover:bg-green-400 mx-auto mt-4"
+                <button className="w-52 bg-green-600 text-slate-950 text-xl p-4 rounded-2xl shadow-lg shadow-green-800/50 hover:bg-green-400 mx-auto mt-4"
                     onClick={SaveFile}>
                     Descargar Imagen
                 </button>
