@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { textToImage } from "@/utils/textToImage";
-import {saveAs} from "file-saver"
+import { saveAs } from "file-saver"
 
 export default function Home() {
     const [animal, setAnimal] = useState('')
@@ -11,8 +11,8 @@ export default function Home() {
     const [imageURL, setImageURL] = useState('/Lettest.jpg')
     const [change, setChange] = useState(false)
 
-    const SaveFile=()=>{
-        saveAs(imageURL,'GeneradaIA.jpg')
+    const SaveFile = () => {
+        saveAs(imageURL, 'GeneradaIA.jpg')
     }
 
     const aiBlob = async (e) => {
@@ -20,7 +20,8 @@ export default function Home() {
         setChange(true)
         const imgURL = await textToImage(animal, text)
         console.log('IMAGEN URL', imgURL)
-        setImageURL(imgURL)
+        if (imgURL === undefined) setImageURLmageURL('/Error504.jpg')
+        else { setImageURL(imgURL) }
         setLoading(true)
         setChange(false)
     }
@@ -48,12 +49,12 @@ export default function Home() {
                 <img src="/Engranaje.png" width={200} height={200} className="mx-auto animate-spin mt-24" alt="Engranaje" />
             )}
             {!change && (
-                <img src={imageURL} width={512} height={512} className="mx-auto mt-4 rounded-xl" alt={change} />
+                <img src={imageURL} width={512} height={512} className="mx-auto mt-4 rounded-xl" alt={imageURL} />
             )}
             {loading && (
                 <button className="w-52 bg-green-600 text-slate-950 text-xl p-4 rounded-xl border-solid border-4 border-green-900 hover:bg-green-400 mx-auto mt-4"
-                onClick={SaveFile}>
-                   Descargar Imagen 
+                    onClick={SaveFile}>
+                    Descargar Imagen
                 </button>
             )}
 
