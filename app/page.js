@@ -33,12 +33,12 @@ export default function Home() {
                 <input className="p-4 text-xl rounded-lg w-4/5" type="text"
                     value={animal}
                     onChange={(e) => setAnimal(e.target.value)}
-                    placeholder="Ingrese un animalito"
+                    placeholder="Describa la imagen. Ej: Un gato blanco"
                 />
                 <input className="p-4 text-xl rounded-lg w-4/5" type="text"
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    placeholder="Ingrese un titulo"
+                    placeholder="Ingrese un titulo. Ej: 'Feliz cumpleaños!'"
                 />
                 <button className="w-1/4 bg-green-600 text-slate-950 text-xl p-4 rounded-2xl shadow-lg shadow-green-800/50 hover:bg-green-400"
                     type="submit">
