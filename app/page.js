@@ -46,7 +46,7 @@ export default function Home() {
                 </button>
             </form>
             {change && (
-                <img src="/Engranaje.png" width={200} height={200} className="mx-auto animate-spin mt-24" alt="Engranaje" />
+                <img src="/Engranaje.png" width={200} height={200} className="mx-auto animate-spin mt-24 mb-24" alt="Engranaje" />
             )}
             {!change && (
                 <img src={imageURL} width={512} height={512} className="mx-auto mt-4 rounded-xl" alt={imageURL} />
