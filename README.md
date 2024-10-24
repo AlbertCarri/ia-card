@@ -14,3 +14,6 @@ Si la API tarda más de 60 segundos en responder, Vercel lanzará un error de ti
 
 ✅ **Sin login y sin límites** 
 ¡Pueden usarla libremente y divertirse como yo lo hago! 🎉
+
+Link a la App web:
+[Tarjetas digitales con IA](https://ia-card.vercel.app/)
